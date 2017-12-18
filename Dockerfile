@@ -31,7 +31,7 @@ RUN \
   CXX="g++ -Wno-unused-local-typedefs" make install && \
   cd /tmp && \
   rm -rf /tmp/node-v* && \
-  npm install -g npm && \
+  npm install -g npm@5.3.x && \
   echo '\n# Node.js\nexport PATH="node_modules/.bin:$PATH"' >> /root/.bashrc
 
 WORKDIR /app
