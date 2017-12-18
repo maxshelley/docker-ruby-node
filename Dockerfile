@@ -1,4 +1,4 @@
-FROM ruby:2.4.2
+FROM ruby:2.3.2
 MAINTAINER Michael Wallasch <development@po2mc.de>
 ENV REFRESHED_AT 2015-08-07
 
@@ -31,7 +31,7 @@ RUN \
   CXX="g++ -Wno-unused-local-typedefs" make install && \
   cd /tmp && \
   rm -rf /tmp/node-v* && \
-  npm install -g npm@5.3.x && \
+  npm install -g npm && \
   echo '\n# Node.js\nexport PATH="node_modules/.bin:$PATH"' >> /root/.bashrc
 
 WORKDIR /app
